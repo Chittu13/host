@@ -15,7 +15,7 @@ __22 ssh server__
 25, 465, 587 SMTP Haraka smtpd 
   - __`search type:exploit name:haraka`__
   - [SMTP](smtp.md)
-  - 
+
 445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139) ---> samba v3.5.0
 - __`search type:exploit name:samba`__
 - [SMB](smb.md) windows
