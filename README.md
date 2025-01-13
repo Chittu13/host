@@ -18,7 +18,7 @@ __22 ssh server__
   - 
 445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139) ---> samba v3.5.0
 - __`search type:exploit name:samba`__
-- [SMB](/Q&A/NetBIOS_SMB_Enumberation.md) windows
+- [SMB](smb.md) windows
 - [SMB@](Q&A/SMB.md)
 - [SAMBA](/Q&A/samba.txt)
 
