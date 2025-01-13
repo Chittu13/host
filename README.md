@@ -25,14 +25,15 @@ __445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139)
 - __`hydra -L user.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <ip> smb`__
 - __You can use psexec module in metasploit__
 - __`smbclient //<ip>/josh -U josh` If you Know pass__
-- __`smbclient //<ip>/pubfiles -N`__
-- __`smbclient //demo.ine.local/shawn -U admin`__
+- __`smbclient //<ip>/pubfiles -N` directories are present inside share "pubfiles"__
+- __`smbclient //127.0.0.1/shawn -U admin`__
   - __it will connect the server like a ftp__
   - __`shawn` is a user__
   - __`-U admin` authenticate as a admin mean you can login using admin logs__
-__`smbmap -H demo.ine.local -u admin -p password1`__
+__`smbmap -H 127.0.0.1 -u admin -p password1`__
   - __It will display the user's and  permissions__
-
+- __`smbclient -L 127.0.0.1 -N` server description__
+- __`rpcclient -U "" -N 127.0.0.1` List all users that exists on the samba server__
 
 
 
