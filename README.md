@@ -7,9 +7,10 @@ __21 FTP server vsftpd2.3.4__
   - [ftp](ftp.md)
 
 __22 ssh server__
+- __`ssh root@10.0.1.22`__
+- __`nc 10.0.1.22 22` To Fetch the banner__ 
   - __`search libssh_auth_bypass`__
-  - [SSh](/Q&A/SSH.md)
-  - [SSH](/Q&A/ssh1.txt)
+  - [SSH](ssh.md)
 
 
 445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139) ---> samba v3.5.0
