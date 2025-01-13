@@ -2,9 +2,11 @@
 
 # Linux exploit
 __21 FTP server vsftpd2.3.4__
+- __`ftp <ip>`__
   - __`search vsftpd`__
+  - [ftp](ftp.md)
 
-22 ssh server 
+__22 ssh server__
   - __`search libssh_auth_bypass`__
   - [SSh](/Q&A/SSH.md)
   - [SSH](/Q&A/ssh1.txt)
