@@ -19,8 +19,31 @@ __22 ssh server__
 445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139) ---> samba v3.5.0
 - __`search type:exploit name:samba`__
 - [SMB](smb.md) windows
-- [SMB@](Q&A/SMB.md)
-- [SAMBA](/Q&A/samba.txt)
+- __`enum4linux -a <ip>` Save the user in user.txt For brute force attack__
+![image1](Image/enum4linux.png)
+- __`smbclient //<ip>/pubfiles -N`__
+- __`smbclient //<ip>/josh -U josh` If you Know pass__
+- 
+__1. Brup force attack on SAMBA__
+- __`hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.198.30.3 -t 4 smb`__
+
+__2. smbmap__
+__`smbmap -H demo.ine.local -u admin -p password1`__
+  - __It will display the user's and  permissions__
+
+__3.smbclient__
+__`smbclient //demo.ine.local/shawn -U admin`__
+  - __it will connect the server like a ftp__
+  - __`shawn` is a user__
+  - __`-U admin` authenticate as a admin mean you can login using admin logs__
+
+__4. enum4linux__
+__`enum4linux -a -u admin -p password1`__
+
+- __1. Target information__
+- __2. Users__
+- __3. SID of the users__
+
 
 
 
