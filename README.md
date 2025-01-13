@@ -12,13 +12,13 @@ __22 ssh server__
   - __`search libssh_auth_bypass`__
   - [SSH](ssh.md)
 
-25, 465, 587 SMTP Haraka smtpd 
+__25, 465, 587 SMTP Haraka smtpd__
   - __`search type:exploit name:haraka`__
   - [SMTP](smtp.md)
 
-445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139) ---> samba v3.5.0
+__445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139)__
 - __`search type:exploit name:samba`__
-- [SMB](smb.md) windows
+- __[SMB](smb.md) windows__
 - __`enum4linux -a <ip>` Save the user in user.txt For brute force attack__
 ![image1](Image/enum4linux.png)
 - __`smbclient //<ip>/pubfiles -N`__
