@@ -24,6 +24,8 @@ __445, 139 (SMB uses 445 however originally SMB ran on top of NetBIOS using 139)
 ![image1](Image/enum4linux.png)
 - __`hydra -L user.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <ip> smb`__
 - __You can use psexec module in metasploit__
+- __`crackmapexec smb target2.ine.local -u administrator -p pineapple --shares`__
+- __`smbclient //target2.ine.local/C$ -U administrator`__
 - __`smbclient //<ip>/josh -U josh` If you Know pass__
 - __`smbclient //<ip>/pubfiles -N` directories are present inside share "pubfiles"__
 - __`smbclient //127.0.0.1/shawn -U admin`__
