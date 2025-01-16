@@ -242,3 +242,42 @@ Ans. S-1-5-21-4056189605-2085045094-1961111545-1005
 
 
 
+
+## Samba
+###### TCP Scan
+`nmap -sV 10.0.1.22` or `nmap -Pn -A -p- -sC -T4 10.0.1.22`
+###### UDP Scan
+nmap 10.0.1.22 -sU --top-port 25 --open -sV 
+#### Metasploit
+* To find the smb version we can use metasploit also
+- `msfconsole`
+- `user auxiliary/scanner/smb/smb_version`
+- `show options`
+- `set rhosts <target_ip>`
+- `run` or `exploit`
+
+### nmblookup
+
+- `nmblookup -A 10.0.1.22`
+  - If you get the result `SAMBA-RECON  <20>`
+  - That means there is a server running
+  - so using `smbclient` we can connect to the server
+#### smbclient
+- `smbclient -L 10.0.1.22 -N`
+- `rpcclient -U "" -N 10.0.1.22`
+
+### Samba 2
+- `rpcclient -U "" -N 10.0.1.22`
+  - `enumdomusers`
+  - `lookupnames admin`
+  - `srvinfo`
+- `enum4linux -o 10.0.1.22`
+- `enum4linux -U 10.0.1.22`
+- `smbclient -L 10.0.1.22 -N`
+- `msfconsole`
+- `use auxiliary/scanner/smb/smb2
+- `set RHOSTS 10.0.1.22`
+- `exploit`
+
+
+
