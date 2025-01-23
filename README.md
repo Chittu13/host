@@ -73,6 +73,8 @@ __`smbmap -H 127.0.0.1 -u admin -p password1`__
   - [Tomcat](/Q&A/tomcat.md)
 
 3389 RDP service
+- __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
+
   - __`search rdp platform:windows`__
   - __`use post/windows/manage/enable_rdp`__
   - [RDP_enable](/Q&A/rdp_enable.md)
@@ -152,8 +154,16 @@ check target system is a vm or not
   - > __set the session id__
 
 ### 9 Checking or Enabling RDP service
+- __`xfreerdp /u:administrator /p:password123 /v:<targetip>`__
+
   - __`search rdp platform:windows`__
   - __`use post/windows/manage/enable_rdp`__
+- __now you can change the password for the user in my case i have access to the administrator account__
+- __so i have meterpreter session running in the background__
+- __so use `shell`__
+- __change the password__
+- __`net user administrator password123`__
+    - __`you have change the password of the admininstrator so that we can login using xfreerdp into rdp using this login`__
   - [RDP_enable](/Q&A/rdp_enable.md)
   - __For more information__
   - [RDP2](/Q&A/rdp.md)
@@ -277,6 +287,5 @@ lastlog
         - __`sysinfo` `getuid`__
 
     
-
 
 
