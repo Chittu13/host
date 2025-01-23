@@ -1,3 +1,7 @@
+- __`find / -name local.txt 2> /dev/null`__
+- __`find -type d -name ".*" 2>/dev/null`__ __it will check hidden directories.__
+
+## [Nmap](nmap.md)
 # Linux and Windows
 
 # Linux exploit
